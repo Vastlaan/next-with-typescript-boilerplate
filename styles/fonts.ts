@@ -1,4 +1,4 @@
 export const fonts = {
-    heading: "'Oswald', sans-serif;",
-    para: "'EB Garamond', serif;",
+    heading: "'Poppins', sans-serif;",
+    para: "'Roboto', sans-serif;",
 };
