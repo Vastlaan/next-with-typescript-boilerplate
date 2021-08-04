@@ -9,23 +9,23 @@ export default function QuickInfoComponent() {
     <Background>
       <Container>
         <Info>
-          <DetailTime>
+          <DetailTime data-testid='time'>
             <MdAvTimer/>
             Ma-Za: 09:00 - 22:00
           </DetailTime>
-          <DetailAddress>
+          <DetailAddress data-testid='address'>
             <MdPinDrop/>
             Rietveldenkade 38, 5222AJ Den Bosch
           </DetailAddress>
           <a href="tel:0031630971455">
-            <DetailPhone>
+            <DetailPhone data-testid='phone'>
               <MdPhoneInTalk/>
               (+31) (0) 630 97 14 55
             </DetailPhone>
           </a>
         </Info>
       </Container>
-        <Cta>
+        <Cta data-testid='brochure'>
             <RiArrowRightCircleLine/>
             Gratis brochure
         </Cta>

@@ -12,7 +12,7 @@ export default function MenuComponent() {
             <Logo/>
             <li>
                 <Link href='/'>
-                    <MenuLink>Home</MenuLink>
+                    <MenuLink role='link'>Home</MenuLink>
                 </Link>
             </li>
             <li>
@@ -23,19 +23,19 @@ export default function MenuComponent() {
                     </p>
                     <ul>
                         <Link href='/onderhoud'>
-                            <li>
+                            <li role='link'>
                                 <FaChevronRight/>
                                 Onderhoud & Reparatie
                             </li>
                         </Link>
                         <Link href='/apk'>
-                            <li>
+                            <li role='link'>
                                 <FaChevronRight/>
                                 APK
                             </li>
                         </Link>
                         <Link href='/banden'>
-                            <li>
+                            <li role='link'>
                                 <FaChevronRight/>
                                 Banden Service
                             </li>
@@ -45,12 +45,12 @@ export default function MenuComponent() {
             </li>
             <li>
                 <Link href='/about'>
-                    <MenuLink>Over Ons</MenuLink>
+                    <MenuLink role='link'>Over Ons</MenuLink>
                 </Link>
             </li>
             <li>
                 <Link href='/contact'>
-                    <MenuLink>Contact</MenuLink>
+                    <MenuLink role='link'>Contact</MenuLink>
                 </Link>
             </li>
         </Menu>

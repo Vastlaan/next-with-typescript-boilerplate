@@ -11,8 +11,6 @@ interface ButtonProps{
 }
 
 export default function ButtonMenu({isOpen, setIsOpen}:ButtonMenuProps) {
-    //this button takes its state as a props, uncomment code below if it does't
-    //const [isOpen, setIsOpen] = useState(false);
     
     return (
         <Button
