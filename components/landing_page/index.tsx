@@ -9,10 +9,10 @@ export default function LandingPage(){
   return (
     <>
      
-      <Header headings={['De garage in den Bosch voor al uw onderhoud en reparaties ','Vakkundige monteurs voor betaalbaar onderhoud.']} />
+      <Header headings={['Reparatie en onderhoud binnen heel Nederland.','Vakkundige monteurs met jaren lang ervaring']} />
      
       <Intersection 
-        title='RR Repair - reparatie en onderhoud binnen Nederland' 
+        title='RR Repair - De garage in den Bosch voor al uw onderhoud en reparaties.' 
         category='reparatie & onderhoud'
         body='Auto Onderhoud of Reparatie nodig in den Bosch. Iedere klus pakken wij professioneel aan. Op al ons werk en onderdelen heeft u standaard garantie.' 
         icon={<IoCarSportSharp/>}

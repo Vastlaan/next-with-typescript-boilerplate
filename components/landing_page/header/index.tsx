@@ -20,12 +20,14 @@ export default function HeaderComponent({headings}:HeaderProps) {
         tl.to(target.current, {y: "-100%", autoAlpha: 0, delay: 4, duration: 1, stagger: .1})
         .set(target.current, { autoAlpha: 0, y: "100%" })
         .call(() => {
+            target.current = []
             setHeadingIndex(prevState => {
                 if(prevState === (headings.length - 1) ){
                     return 0
                 }
                 return prevState + 1
             })
+            console.log('in Effect: ', target.current)
         })
         .to(target.current, {
             autoAlpha: 1,
@@ -37,11 +39,14 @@ export default function HeaderComponent({headings}:HeaderProps) {
         return ()=> {tl.kill()}
     },[])
 
-
     return (
         <Header>
             <Content>
-                <Heading1>{headings[headingIndex].split(' ').map((word, i) => <span  key={i} ref={(el=>target.current.push(el))}>{word} </span>)}</Heading1>
+                <Heading1>{headings[headingIndex].split(' ').map((word, i) => <span  key={i} ref={(el=>{
+                    if(el){
+                        return target.current.push(el)
+                    }   
+                })}>{word} </span>)}</Heading1>
                 <ButtonsConatiner>
                     <Link href='/apk'>
                         <ButtonFull margin='1.4rem'>Reparaties</ButtonFull>

@@ -66,7 +66,7 @@ const CustomText = styled.p`
     font-size: 1.9rem;
     font-family: ${fonts.heading};
     font-weight: 300;
-    color: ${(p: ThemeProps) => (p.color ? p.color : p.theme.greyLight)};
+    color: ${(p: ThemeProps) => (p.color ? p.color : p.theme.grey1)};
     line-height: 1.3;
     letter-spacing: 0.15rem;
     text-align: ${(p: FlexibleComponentProps) => (p.align ? p.align : "center")};
@@ -85,6 +85,6 @@ const ButtonSmall = styled.button<FlexibleComponentProps>`
     border: 1px solid #04917c;
     font-family: ${fonts.heading};
     font-weight: 300;
-    color: ${(p:ThemeProps) => (p.color ? p.color : p.theme.greyLight)};
+    color: ${(p:ThemeProps) => (p.color ? p.color : p.theme.grey1)};
     letter-spacing: 0.15rem;
 `;

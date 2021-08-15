@@ -27,6 +27,15 @@ const StylesConatiner = createGlobalStyle`
     }
   }
 
+  @keyframes appearFromRight{
+    0% {
+      transform: translateX(100%);   
+    }
+    100%{
+      transform: translateX(0);   
+    }
+  }
+
   *,
   *::after,
   *::before{

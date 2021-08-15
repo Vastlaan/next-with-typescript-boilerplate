@@ -1,10 +1,13 @@
+import {useState} from 'react'
 import styled from 'styled-components'
 import respond from 'styled-queries-ts'
-import {ContainerNarrow} from '../../styles'
+import Modal from '../modals/brochure'
 import { MdAvTimer, MdPinDrop, MdPhoneInTalk} from 'react-icons/md'
 import {RiArrowRightCircleLine} from 'react-icons/ri'
 
 export default function QuickInfoComponent() {
+
+  const [displayModal, setDisplayModal] = useState(false)
   return (
     <Background>
       <Container>
@@ -25,10 +28,11 @@ export default function QuickInfoComponent() {
           </a>
         </Info>
       </Container>
-        <Cta data-testid='brochure'>
-            <RiArrowRightCircleLine/>
-            Gratis brochure
-        </Cta>
+      <Cta data-testid='brochure' onClick={()=>setDisplayModal(true)}>
+          <RiArrowRightCircleLine/>
+          Gratis brochure
+      </Cta>
+      {displayModal && <Modal setDisplayModal={setDisplayModal} /> }
     </Background>
   )
 }
@@ -87,7 +91,8 @@ const DetailPhone = styled(Detail)`
 
   ${respond('s', `margin: 0 2.2rem;`)}
 `
-const Cta = styled.div`
+const Cta = styled.button`
+  border: none;
   display: flex;
   align-items: center;
   background-color: ${p=>p.theme.primary};
@@ -117,6 +122,9 @@ const Cta = styled.div`
 
   &:hover{
     background-color: ${p=>p.theme.tertiary};
+  }
+  &::active, ::focus{
+    outline: none;
   }
 
 `
