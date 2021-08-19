@@ -53,7 +53,7 @@ const StylesConatiner = createGlobalStyle`
       font-size: 50%;
       box-sizing: border-box;
       font-family: ${fonts.para};
-      line-height: 1.3;
+      line-height: 1.4;
       ${() => respond("xs", `font-size:30%;`)}
       ${() => respond("l", `font-size:55%;`)}     
       ${() => respond("xxl", `font-size:62.5%;`)}
